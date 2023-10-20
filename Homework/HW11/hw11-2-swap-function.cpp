@@ -51,12 +51,14 @@ int main(){
     scanf("%s",nameB);
     printf("Age :\n");
     scanf("%d",&B);
-
+    
     printf("** RESULT **\n");
     printf("Name: %s (%d)\n",nameA,A);
     printf("Name: %s (%d)\n",nameB,B);
 
     age(&A,&B);
+
+    printf("\n");
 
     printf("** SWAP AGE **\n");
     printf("Name: %s (%d)\n",nameA,A);
