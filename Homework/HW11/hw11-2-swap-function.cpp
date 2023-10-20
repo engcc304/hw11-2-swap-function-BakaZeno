@@ -23,3 +23,46 @@
 
 */
 
+#include <stdio.h>
+
+void age(int *A,int *B){
+    if(*A>*B){
+        int defaultA = *A;
+        *A = *B;
+        *B = defaultA;
+    }
+}
+
+int main(){
+
+    char nameA[50];
+    char nameB[50];
+    int A;
+    int B;
+
+    printf("Input A\n");
+    printf("Name :\n");
+    scanf("%s",nameA);
+    printf("Age :\n");
+    scanf("%d",&A);
+
+    printf("Input B\n");
+    printf("Name :\n");
+    scanf("%s",nameB);
+    printf("Age :\n");
+    scanf("%d",&B);
+    
+    printf("** RESULT **\n");
+    printf("Name: %s (%d)\n",nameA,A);
+    printf("Name: %s (%d)\n",nameB,B);
+
+    age(&A,&B);
+
+    printf("\n");
+
+    printf("** SWAP AGE **\n");
+    printf("Name: %s (%d)\n",nameA,A);
+    printf("Name: %s (%d)\n",nameB,B);
+
+    return 0;
+}
